@@ -1,0 +1,16 @@
+@startUML
+[*]--> Alta
+[*]--> Enfermo
+Alta <-- Enfermo
+Enfermo --> Alta
+Enfermo --> Citado
+Alta --> Citado
+Citado --> Citado
+Citado --> No_Citado
+Citado --> En_Espera
+No_Citado --> En_Espera
+En_Espera --> En_Tratamiento
+En_Tratamiento --> [*]
+En_Tratamiento --> Alta
+Alta --> [*]
+@endUML
