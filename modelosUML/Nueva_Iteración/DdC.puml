@@ -1,0 +1,35 @@
+@startuml
+
+class Profesional_Médico 
+
+class Protocolos_Médicos
+
+class Centro_de_salud
+
+class Urgencias
+
+class Paciente
+
+class Historia_Clínica 
+
+class Tratamiento
+
+Paciente --> Centro_de_salud: "acude a"
+Paciente --> Historia_Clínica: "posee"
+Paciente --> Tratamiento: "sigue"
+
+Historia_Clínica --> Paciente: "pertenece a"
+Historia_Clínica --> Tratamiento: "incluye"
+
+Tratamiento --> Profesional_Médico: "asignado por"
+
+Profesional_Médico --> Protocolos_Médicos: "sigue"
+Profesional_Médico --> Historia_Clínica: "consulta"
+
+Centro_de_salud --> Urgencias: "incluye"
+Centro_de_salud --> Profesional_Médico: "emplea"
+Centro_de_salud --> Protocolos_Médicos: "aplica"
+
+Urgencias --> Protocolos_Médicos: "se basa en"
+
+@enduml
