@@ -1,0 +1,17 @@
+@startuml
+[*] --> Trabajando: "Inicio de turno"
+
+Trabajando --> De_Guardia: "Asignado a guardia"
+Trabajando --> En_Cita: "Atendiendo cita"
+
+En_Cita --> De_Guardia: "Finaliza cita y asignado a guardia"
+En_Cita --> En_Cita: "Siguiente cita"
+
+De_Guardia --> En_Cita: "Llamado para cita"
+De_Guardia --> De_Guardia: "Continúa en guardia"
+De_Guardia --> No_Trabajando: "Finaliza turno"
+
+En_Cita --> No_Trabajando: "Turno finalizado"
+
+No_Trabajando --> [*]: "Fin del día"
+@enduml
