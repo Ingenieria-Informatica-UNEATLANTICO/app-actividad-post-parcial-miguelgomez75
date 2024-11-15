@@ -1,0 +1,9 @@
+@startUML
+[*]--> Asignado
+[*]--> No_Asignado
+Asignado --> En_Proceso
+En_Proceso --> No_Asignado
+En_Proceso --> Finalizado
+Finalizado --> [*]
+No_Asignado --> [*]
+@endUml

@@ -1,0 +1,12 @@
+@startuml
+[*] --> No_Asignado: "Sin asignar aún"
+
+No_Asignado --> Asignado: "Tratamiento prescrito"
+Asignado --> En_Proceso: "Inicia tratamiento"
+
+En_Proceso --> Finalizado: "Completa tratamiento"
+En_Proceso --> No_Asignado: "Tratamiento interrumpido"
+
+Finalizado --> [*]: "Seguimiento concluido"
+No_Asignado --> [*]: "No requerido"
+@enduml

@@ -1,0 +1,21 @@
+@startuml
+[*] --> Alta: "Registro inicial"
+[*] --> Enfermo: "Presenta síntomas"
+
+Enfermo --> Citado: "Cita programada"
+Enfermo --> Alta: "Recuperación"
+
+Alta --> Citado: "Solicita cita"
+
+Citado --> Citado: "Reprograma cita"
+Citado --> No_Citado: "Cita cancelada"
+Citado --> En_Espera: "Acude a consulta"
+
+No_Citado --> En_Espera: "Solicita atención urgente"
+
+En_Espera --> En_Tratamiento: "Consulta realizada"
+En_Tratamiento --> Alta: "Completa tratamiento"
+En_Tratamiento --> [*]: "Finaliza seguimiento"
+
+Alta --> [*]: "Caso cerrado"
+@enduml

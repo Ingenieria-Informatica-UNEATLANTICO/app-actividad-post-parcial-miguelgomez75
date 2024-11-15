@@ -1,0 +1,32 @@
+@startuml
+
+object Profesional_Médico
+
+object Protocolos_Médicos
+
+object Centro_de_salud
+
+object Urgencias
+
+object Paciente
+
+object Historia_Clínica
+
+object Tratamiento
+
+Centro_de_salud --> Paciente: "cita a"
+Paciente --> Centro_de_salud: "acude a"
+Paciente --> Historia_Clínica: "posee"
+Historia_Clínica --> Tratamiento: "compone"
+Tratamiento --> Paciente: "asignado a"
+Tratamiento --> Profesional_Médico: "asignado por"
+Profesional_Médico --> Historia_Clínica: "consulta"
+Profesional_Médico --> Tratamiento: "define"
+Profesional_Médico --> Protocolos_Médicos: "aplica"
+Centro_de_salud --> Profesional_Médico: "emplea"
+Centro_de_salud --> Protocolos_Médicos: "utiliza"
+Centro_de_salud --> Urgencias: "incluye"
+Urgencias --> Protocolos_Médicos: "se basa en"
+Paciente --> Urgencias: "es atendido en"
+
+@enduml
