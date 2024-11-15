@@ -1,0 +1,13 @@
+@startUML
+[*]--> Trabajando
+[*]--> [*]
+Trabajando --> De_Guardia
+Trabajando --> En_Cita
+En_Cita --> De_Guardia
+En_Cita --> En_Cita
+De_Guardia --> En_Cita
+De_Guardia --> De_Guardia
+De_Guardia --> No_Trabajando
+En_Cita --> No_Trabajando
+No_Trabajando --> [*]
+@endUml
