@@ -1,0 +1,42 @@
+@startuml
+
+class Profesional_Médico
+
+class Protocolos_Médicos
+
+class Centro_de_salud
+
+class Urgencias
+
+class Paciente
+
+class Historia_Clínica
+
+class Tratamiento
+
+Paciente --> Centro_de_salud: "Acude"
+
+Historia_Clínica --> Paciente: "Tiene"
+
+Profesional_Médico --> Historia_Clínica: "Consulta"
+
+Tratamiento --> Historia_Clínica: "Forma"
+
+Profesional_Médico --> Tratamiento: "Asigna"
+
+Profesional_Médico --> Protocolos_Médicos: "Debe seguir"
+
+Centro_de_salud --> Urgencias: "Tiene"
+
+Urgencias --> Protocolos_Médicos: "Sigue"
+
+Centro_de_salud --> Protocolos_Médicos: "Tiene"
+
+Centro_de_salud --> Profesional_Médico: "Formado por"
+
+Paciente --> Urgencias: "Acude"
+
+Paciente --> Tratamiento: "Sigue"
+
+
+@enduml
