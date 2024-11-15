@@ -1,0 +1,44 @@
+@startuml
+
+object Profesional_Médico
+
+object Protocolos_Médicos
+
+object Centro_de_salud
+
+object Urgencias
+
+object Paciente
+
+object Historia_Clínica
+
+object Tratamiento
+
+Centro_de_salud --> Paciente: "Cita"
+
+Paciente --> Centro_de_salud: "Acude"
+
+Paciente --> Historia_Clínica: "Tiene"
+
+Profesional_Médico --> Historia_Clínica: "Consulta"
+
+Tratamiento --> Historia_Clínica: "Compone"
+
+Profesional_Médico --> Tratamiento: "Asigna"
+
+Profesional_Médico --> Protocolos_Médicos: "Sigue"
+
+Urgencias --> Centro_de_salud: "englobada"
+
+Urgencias --> Protocolos_Médicos: "Sigue"
+
+Centro_de_salud --> Protocolos_Médicos: "Tiene"
+
+Profesional_Médico --> Centro_de_salud: "Compone"
+
+Paciente --> Urgencias: "Acude"
+
+Paciente --> Tratamiento: "Sigue"
+
+
+@enduml
